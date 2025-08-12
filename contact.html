@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="taniti.css">
+    <title>TANITI-Booking</title>
+    
+
+</head>
+
+<body>
+    <header>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="activities.html">Activities</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">BOOK NOW!</a>
+    </div>
+    </header>
+    <br><br>
+
+    <form action="https://wp.zybooks.com/form-viewer.php" method="post" name="form" target="_blank">
+        <h3>Your Tanitian Experience Awaits - Book Now!</h3>
+
+        <div>
+            <label for="first">First Name:</label>
+            <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+        </div>
+
+        <div>
+            <label for="first">Last Name:</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+        </div>
+
+        <div>
+            <label for="first">Your Email:</label>
+            <input type="email" name="email" id="email" placeholder="abc123@email.com" required>
+        </div>
+
+        <div>
+            <label for="adults">Adults:</label>
+            <select name="adults" id="adults">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+            </select>
+        </div>
+
+        <div>
+             <label for="children">Children:</label>
+            <select name="Children" id="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="date">Check in:</label>
+            <input type="date" id="departure-date" name="departure-date" required>
+        </div>
+
+        <div>
+            <label for="date">Check out:</label>
+            <input type="date" name="return-date" id="return-date" required>
+        </div>
+
+
+        <div>
+            <button type="submit" id="btn">Book Now</button>
+        </div>
+
+    </form>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script>
+  const today = new Date().toISOString().split('T')[0]; 
+  document.getElementById('departure-date').setAttribute('min', today);
+  document.getElementById('return-date').setAttribute('min', today);
+  document.getElementById("btn").addEventListener("click", function(){
+    alert('Booking Complete!');
+  });
+ 
+</script>
+
+    <br><br><br><br>
+<footer>
+    <span>&copy; 2025 TANITI ISLAND RESORT. All rights reserved.</span>
+</footer>
+</body>
+</html>
