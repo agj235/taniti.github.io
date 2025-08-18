@@ -145,6 +145,7 @@ footer {
   body{
     background-size: contain;
     background-position: top;
+    background-image: url('/TanitiD479/taniti.jpg');
   }
   .topnav{
     flex-direction: column;
@@ -174,5 +175,6 @@ footer {
   }
   
 }
+
 
 
